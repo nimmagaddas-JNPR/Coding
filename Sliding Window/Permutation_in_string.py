@@ -15,7 +15,7 @@ def find_permutation(str, pattern):
                 matched_count += 1
             if matched_count == len(p_map):
                 return True
-        if end >= len(p_map) - 1:
+        if end >= len(pattern) - 1:
             if str[start] in p_map:
                 if p_map[str[start]] == 0:
                     matched_count -= 1
@@ -25,5 +25,6 @@ def find_permutation(str, pattern):
     return False
 
 
-print(find_permutation("oidbcaf", "abc"))
-print(find_permutation("odicf", "dc"))
+# print(find_permutation("oidbcaf", "abc"))
+# print(find_permutation("odicf", "dc"))
+print(find_permutation("bcdxabcdy", "bcdyabcdx"))
